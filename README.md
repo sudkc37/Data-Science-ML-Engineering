@@ -7,5 +7,12 @@ Financial and accounting models are essential for evaluating credit risk, offeri
 
 Machine learning models such as Logistic Regression, Regularized Logistic Regression, Decision Tree, Random Forest, and Gradient Boosting Classifier, along with explainable artificial intelligence (XAI) techniques, were employed to develop a comprehensive risk model. Each model's robustness were evaluated based on accuracy, classification reports, and the underlying transparency or explainability.
 
+End Results of the Model:
+         Models                 Accuracy	Weighted Avg Precision	Weighted Avg Recall	 Weighted Avg F1-Score	 Explainability
+Logistic Regression	              89.24	          91.0	                    89.0	               89.0	              self
+Regularized Logistic Regression	  89.22	          91.0	                    89.0	               89.0	              self
+Decission Tree	                  89.27	          91.0	                    89.0	               89.0	              less
+Random Forest	                    89.58	          91.0	                    90.0	               89.0	              less
+Gradiant Boosting	                90.32	          90.0	                    90.0	               90.0                No
 
 
