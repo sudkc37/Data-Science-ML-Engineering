@@ -1,0 +1,42 @@
+Extract features function, extracts several types of features from an input images. It computes color features in the LAB color space, 
+texture features using entropy, sobel and roberts edge detectors, as well as gabor filter responses for texture analysis.
+
+1. Converts the image to LAB color space using "rbg2lab", then extracts and averages the A and B channels which represents the 
+   "color features" information. 
+
+2. Converts the image to grayscale, resize, and computes textural features using entropy and edge detectors.
+    Entropy:
+        It provides a measure of the amount of information or complexity in the image. It measures randomness or the complexity 
+        in pixel intensity distributions. It is derives from the concept of entropy in information theory. Given a grayscale image
+        with intensity value p(i) representing the probability of pixel having intensity i, the entropy H is calculated as:
+        H = -∑_(i=0)^(L-1)▒p(i) .〖log〗_2 (p(i))
+    where,
+        p(i) is the normalized histogram of the image, representing the probability of intensity i occuring in the image.
+        L is the number of possible intensity level 
+        log2 is the base-2 logarithm. 
+
+
+   Edge Detectors:
+            Edge detectors detect edges and computes their mean values. Detectors like Roberts and Sobel operators compute the gradient
+            of the pixel intensities in an image to highlight areas where intensity changes significantly, usually corresponding to edges.
+
+    Roberts Operator:
+            Roberts operator is a simple edge detection method that approximates the gradient at a pixel by compairing diagonally adjacent 
+            pixels. It uses two 2x2 convolution kernels.
+    
+    Sobel Operator:
+            It uses larger convolution kernels 3x3 to cimpute gradients and is more robust to noise than the roberts operator.
+
+
+3. Apply Gabor filters with different orientations and scales to extract textur patterns, summarizatig their output by averaging the response.
+
+4. Now, iterates through all images in a directory, extracts features using our function, and then stores the resulting features and image
+    names in an HDF5 file (CustomFeatures.h5).
+    I. Read each image in the directory using "io.imread" and extract features using the "extract_features" function.
+
+    II.Extracted features are appended to the feats list, and the image name is appended to the names list Features and image names
+        are saved to an HDF5 file using "h5py". The image features are stored in the dataset "dataset_1" and the image names are stored
+        as strings in the "dataset_2".
+
+
+
