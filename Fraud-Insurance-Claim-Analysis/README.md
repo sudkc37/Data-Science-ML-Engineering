@@ -1,12 +1,17 @@
-Credit Risk Modeling Using Machine Learning
+For data analysis, Structured Query Language (SQL) was employed, and Python's Plotly and Seaborn libraries were used to create interactive charts and plots. 
+Findings provide significant insights into the distribution of insurance types, the prevalence of fraud claims, and their geographical concentration. 
+The analysis revealed that approximately 55% of the insurance policies examined are life insurance policies. Interestingly, about 18% of total fraud claims
+are related to mobile insurance, even though mobile insurance accounts for only 0.41% of the total insurance policies.
 
+Languages:
+SQL, 
+Python
 
-Credit risk is defined as the potential loss arising from a borrower or counterparty failing to meet its obligations according to the agreed terms. Machine learning plays a crucial role in credit risk modeling due to its capacity to analyze complex data relationships and improve predictive accuracy. Unlike traditional methods, which may rely on simplified assumptions, machine learning algorithms can effectively capture nonlinearities and interactions among various risk factors, thereby enhancing risk assessments. These models adapt to changing market conditions and borrower behaviors, ensuring robust and responsive credit decisions over time. By automating and optimizing credit underwriting processes, machine learning enables financial institutions to manage risk more effectively and make informed lending decisions that enhance overall portfolio performance and stability.
+Liabries:
+Matplotlib,
+Seaborn,
+Plotly,
+Streamlit,
+Pandas,
+PandaSQL
 
-Financial and accounting models are essential for evaluating credit risk, offering sophisticated frameworks for assessing a broad range of financial and non-financial data. However, these models often rely on predefined rules and assumptions that may not capture all the nuances and complexities present in borrower data. Machine learning complements these models by analyzing large volumes of data and uncovering patterns that traditional methods might miss. ML models can handle non-linear relationships, adapt to changing conditions, and incorporate a wider array of variables beyond what financial and accounting models typically consider. This integration results in more accurate risk assessments and allows financial institutions to make more informed and agile decisions in managing credit risk. Thus, while financial and accounting models provide a strong foundation, incorporating machine learning significantly enhances their effectiveness in modern risk management practices.
-
-Machine learning models such as Logistic Regression, Regularized Logistic Regression, Decision Tree, Random Forest, and Gradient Boosting Classifier, along with explainable artificial intelligence (XAI) techniques, were employed to develop a comprehensive risk model. Each model's robustness were evaluated based on accuracy, classification reports, and the underlying transparency or explainability.
-
-Languages: SQL, Python
-
-Libraries: Sklearn, Feature-Engine, Shap, Opendatasets, Imbalanced-learn, PandaSQL, Numpy, Plotly, Matplotlib, Seaborn Collections
