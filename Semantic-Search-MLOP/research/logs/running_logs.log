@@ -1,0 +1,67 @@
+[2024-09-26 12:37:18,738: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-26 12:37:18,741: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-26 12:37:18,744: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-26 12:37:18,747: INFO: common: created directory at: artifacts]
+[2024-09-26 12:37:18,748: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-09-26 12:37:19,441: INFO: 2280763589: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: F862:11E537:87FBAF:92B18D:66F59BCF
+Accept-Ranges: bytes
+Date: Thu, 26 Sep 2024 17:37:19 GMT
+Via: 1.1 varnish
+X-Served-By: cache-dfw-kdfw8210147-DFW
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1727372239.287298,VS0,VE146
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 56764d49a1d9f30fd24db5f1dee5ff0fbf91075f
+Expires: Thu, 26 Sep 2024 17:42:19 GMT
+Source-Age: 0
+
+]
+[2024-09-28 14:32:22,143: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 14:32:22,146: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 14:32:22,149: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 14:32:22,149: INFO: common: created directory at: artifacts]
+[2024-09-28 14:32:22,150: INFO: common: created directory at: artifacts/model_evaluation]
+[2024-09-28 14:37:29,395: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 14:37:29,397: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 14:37:29,400: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 14:37:29,402: INFO: common: created directory at: artifacts]
+[2024-09-28 14:37:29,402: INFO: common: created directory at: artifacts/model_evaluation]
+[2024-09-28 14:40:54,731: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 14:40:54,736: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 14:40:54,742: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 14:40:54,743: INFO: common: created directory at: artifacts]
+[2024-09-28 14:40:54,744: INFO: common: created directory at: artifacts/model_evaluation]
+[2024-09-28 14:41:11,091: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 14:41:11,093: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 14:41:11,096: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 14:41:11,097: INFO: common: created directory at: artifacts]
+[2024-09-28 14:41:11,097: INFO: common: created directory at: artifacts/model_evaluation]
+[2024-09-28 14:41:18,965: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 14:41:18,967: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 14:41:18,970: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 14:41:18,970: INFO: common: created directory at: artifacts]
+[2024-09-28 14:41:18,971: INFO: common: created directory at: artifacts/model_evaluation]
+[2024-09-28 14:41:44,394: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 14:41:44,396: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 14:41:44,399: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 14:41:44,400: INFO: common: created directory at: artifacts]
+[2024-09-28 14:41:44,401: INFO: common: created directory at: artifacts/model_evaluation]
+[2024-09-28 15:00:00,172: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 15:00:00,176: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 15:00:00,177: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 15:00:00,178: INFO: common: created directory at: artifacts]
+[2024-09-28 15:00:00,179: INFO: common: created directory at: artifacts/model_evaluation]

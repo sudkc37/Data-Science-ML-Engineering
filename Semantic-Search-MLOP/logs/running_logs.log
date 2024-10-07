@@ -1,0 +1,1414 @@
+[2024-09-25 09:05:52,088: INFO: main: Wellcome to the Prediction Universe]
+[2024-09-25 09:06:51,574: INFO: main: Wellcome to the Prediction Universe]
+[2024-09-25 15:55:04,625: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-09-25 15:55:04,625: ERROR: main: 'ConfigurationManager' object has no attribute 'config']
+Traceback (most recent call last):
+  File "/Users/sudipkhadka/Desktop/mlops-end-end/Semantic-search/main.py", line 9, in <module>
+    data_ingestion.main()
+  File "/Users/sudipkhadka/Desktop/mlops-end-end/Semantic-search/src/mlProject/pipeline/stage_01_data_ingestion.py", line 13, in main
+    data_ingestion_config = config.get_data_ingestion_config()
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sudipkhadka/Desktop/mlops-end-end/Semantic-search/src/mlProject/config/configuration.py", line 20, in get_data_ingestion_config
+    config = self.config.data_ingestion
+             ^^^^^^^^^^^
+AttributeError: 'ConfigurationManager' object has no attribute 'config'
+[2024-09-26 11:57:28,567: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-09-26 11:57:28,569: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-26 11:57:28,569: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-26 11:57:28,570: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-26 11:57:28,571: INFO: common: created directory at: artifacts]
+[2024-09-26 11:57:28,571: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-09-26 11:57:30,053: INFO: data_ingestion: artifacts/data_ingestion/red.zip download! with following info: 
+Server: GitHub.com
+Date: Thu, 26 Sep 2024 16:57:29 GMT
+Content-Type: text/html; charset=utf-8
+Vary: X-PJAX, X-PJAX-Container, Turbo-Visit, Turbo-Frame, Accept-Encoding, Accept, X-Requested-With
+ETag: W/"0c3710458a1cd662a389667608d87535"
+Cache-Control: max-age=0, private, must-revalidate
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Frame-Options: deny
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Referrer-Policy: no-referrer-when-downgrade
+Content-Security-Policy: default-src 'none'; base-uri 'self'; child-src github.com/assets-cdn/worker/ github.com/webpack/ github.com/assets/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com www.githubstatus.com collector.github.com raw.githubusercontent.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com *.rel.tunnels.api.visualstudio.com wss://*.rel.tunnels.api.visualstudio.com objects-origin.githubusercontent.com copilot-proxy.githubusercontent.com api.githubcopilot.com api.individual.githubcopilot.com api.business.githubcopilot.com api.enterprise.githubcopilot.com proxy.individual.githubcopilot.com proxy.business.githubcopilot.com proxy.enterprise.githubcopilot.com *.actions.githubusercontent.com wss://*.actions.githubusercontent.com productionresultssa0.blob.core.windows.net/ productionresultssa1.blob.core.windows.net/ productionresultssa2.blob.core.windows.net/ productionresultssa3.blob.core.windows.net/ productionresultssa4.blob.core.windows.net/ productionresultssa5.blob.core.windows.net/ productionresultssa6.blob.core.windows.net/ productionresultssa7.blob.core.windows.net/ productionresultssa8.blob.core.windows.net/ productionresultssa9.blob.core.windows.net/ productionresultssa10.blob.core.windows.net/ productionresultssa11.blob.core.windows.net/ productionresultssa12.blob.core.windows.net/ productionresultssa13.blob.core.windows.net/ productionresultssa14.blob.core.windows.net/ productionresultssa15.blob.core.windows.net/ productionresultssa16.blob.core.windows.net/ productionresultssa17.blob.core.windows.net/ productionresultssa18.blob.core.windows.net/ productionresultssa19.blob.core.windows.net/ github-production-repository-image-32fea6.s3.amazonaws.com github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com copilot-workspace.githubnext.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src viewscreen.githubusercontent.com notebooks.githubusercontent.com; img-src 'self' data: blob: github.githubassets.com media.githubusercontent.com camo.githubusercontent.com identicons.github.com avatars.githubusercontent.com private-avatars.githubusercontent.com github-cloud.s3.amazonaws.com objects.githubusercontent.com secured-user-images.githubusercontent.com/ user-images.githubusercontent.com/ private-user-images.githubusercontent.com opengraph.githubassets.com github-production-user-asset-6210df.s3.amazonaws.com customer-stories-feed.github.com spotlights-feed.github.com objects-origin.githubusercontent.com *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com/ secured-user-images.githubusercontent.com/ private-user-images.githubusercontent.com github-production-user-asset-6210df.s3.amazonaws.com gist.github.com; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; upgrade-insecure-requests; worker-src github.com/assets-cdn/worker/ github.com/webpack/ github.com/assets/ gist.github.com/assets-cdn/worker/
+Set-Cookie: _gh_sess=e3H3WSp3ifAuhUrJO23GLC%2BcHN8mfRcUX%2FRe1DjI9HmYg9JvC1Bfj0oV7hViSGCed3dpJO1zOR%2B7fsL8VL2sfbEzxTUudYJNVZnnPn%2FBBf8ROuQ5Erv%2FxFKNOKCQPAx0KtX7H9wFk7wZSLHHZ5tvRViu58zhnZbJ%2BYbfhuJwcgOv4lJiYfxGqHFsoluZExpz%2Fea3wKivKBuI9%2BnL61r65nwrT1490a5%2BO8K9vgSZfFtS6LPVFgBGIDjWlihkKjSqWPScdrUF4xmbOC3Qf2sPbQ%3D%3D--hCdVDR1IMwX7W23C--mhJyc%2FqRfql7d0Tx%2F7eNkw%3D%3D; Path=/; HttpOnly; Secure; SameSite=Lax
+Set-Cookie: _octo=GH1.1.1289524836.1727369848; Path=/; Domain=github.com; Expires=Fri, 26 Sep 2025 16:57:28 GMT; Secure; SameSite=Lax
+Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Fri, 26 Sep 2025 16:57:28 GMT; HttpOnly; Secure; SameSite=Lax
+Accept-Ranges: bytes
+Transfer-Encoding: chunked
+X-GitHub-Request-Id: C13D:198A0:3E2AE7:57D6EF:66F59278
+connection: close
+
+]
+[2024-09-26 11:57:30,054: ERROR: main: File is not a zip file]
+Traceback (most recent call last):
+  File "/Users/sudipkhadka/Desktop/Semantic-search/main.py", line 9, in <module>
+    data_ingestion.main()
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/pipeline/stage_01_data_ingestion.py", line 18, in main
+    data_ingestion.extract_zip_file()
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/components/data_ingestion.py", line 36, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+  File "/opt/homebrew/Cellar/python@3.10/3.10.15/Frameworks/Python.framework/Versions/3.10/lib/python3.10/zipfile.py", line 1272, in __init__
+    self._RealGetContents()
+  File "/opt/homebrew/Cellar/python@3.10/3.10.15/Frameworks/Python.framework/Versions/3.10/lib/python3.10/zipfile.py", line 1339, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+[2024-09-26 11:59:17,054: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-09-26 11:59:17,056: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-26 11:59:17,056: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-26 11:59:17,057: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-26 11:59:17,058: INFO: common: created directory at: artifacts]
+[2024-09-26 11:59:17,058: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-09-26 11:59:17,058: INFO: data_ingestion: File already exists of size: ~ 799 KB]
+[2024-09-26 11:59:17,058: ERROR: main: File is not a zip file]
+Traceback (most recent call last):
+  File "/Users/sudipkhadka/Desktop/Semantic-search/main.py", line 9, in <module>
+    data_ingestion.main()
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/pipeline/stage_01_data_ingestion.py", line 18, in main
+    data_ingestion.extract_zip_file()
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/components/data_ingestion.py", line 36, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+  File "/opt/homebrew/Cellar/python@3.10/3.10.15/Frameworks/Python.framework/Versions/3.10/lib/python3.10/zipfile.py", line 1272, in __init__
+    self._RealGetContents()
+  File "/opt/homebrew/Cellar/python@3.10/3.10.15/Frameworks/Python.framework/Versions/3.10/lib/python3.10/zipfile.py", line 1339, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+[2024-09-26 12:00:57,174: INFO: main: welome]
+[2024-09-26 12:51:11,646: INFO: main: welome]
+[2024-09-26 12:51:11,647: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-09-26 12:51:11,648: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-26 12:51:11,649: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-26 12:51:11,650: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-26 12:51:11,650: INFO: common: created directory at: artifacts]
+[2024-09-26 12:51:11,650: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-09-26 12:51:12,426: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: F862:11E537:87FBAF:92B18D:66F59BCF
+Accept-Ranges: bytes
+Date: Thu, 26 Sep 2024 17:51:12 GMT
+Via: 1.1 varnish
+X-Served-By: cache-dfw-kdfw8210075-DFW
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1727373072.129266,VS0,VE218
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 577741e93e3ef81f493ba379e487f99bb2a68c17
+Expires: Thu, 26 Sep 2024 17:56:12 GMT
+Source-Age: 0
+
+]
+[2024-09-26 12:51:12,430: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-09-26 14:00:12,101: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-26 14:00:12,103: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-26 14:00:12,109: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-26 14:00:12,110: INFO: common: created directory at: artifacts]
+[2024-09-26 14:00:12,112: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-09-26 14:05:13,418: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-26 14:05:13,420: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-26 14:05:13,423: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-26 14:05:13,424: INFO: common: created directory at: artifacts]
+[2024-09-26 14:05:13,424: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-09-26 14:07:06,841: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-26 14:07:06,843: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-26 14:07:06,845: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-26 14:07:06,846: INFO: common: created directory at: artifacts]
+[2024-09-26 14:07:06,846: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-09-26 14:15:25,104: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-26 14:15:25,107: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-26 14:15:25,109: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-26 14:15:25,112: INFO: common: created directory at: artifacts]
+[2024-09-26 14:15:25,113: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-09-26 14:43:13,428: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-26 14:43:13,432: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-26 14:43:13,435: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-26 14:43:13,436: INFO: common: created directory at: artifacts]
+[2024-09-26 14:43:13,437: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-09-26 14:44:43,976: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-26 14:44:43,979: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-26 14:44:43,981: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-26 14:44:43,982: INFO: common: created directory at: artifacts]
+[2024-09-26 14:44:43,983: INFO: common: created directory at: artifacts/data_validation]
+[2024-09-26 14:45:14,218: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-26 14:45:14,220: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-26 14:45:14,223: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-26 14:45:14,224: INFO: common: created directory at: artifacts]
+[2024-09-26 14:45:14,224: INFO: common: created directory at: artifacts/data_validation]
+[2024-09-26 14:46:57,684: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-26 14:46:57,686: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-26 14:46:57,689: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-26 14:46:57,689: INFO: common: created directory at: artifacts]
+[2024-09-26 14:46:57,690: INFO: common: created directory at: artifacts/data_validation]
+[2024-09-26 14:59:40,492: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-26 14:59:40,495: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-26 14:59:40,497: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-26 14:59:40,498: INFO: common: created directory at: artifacts]
+[2024-09-26 14:59:40,499: INFO: common: created directory at: artifacts/data_validation]
+[2024-09-26 15:28:49,391: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-26 15:28:49,393: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-26 15:28:49,396: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-26 15:28:49,397: INFO: common: created directory at: artifacts]
+[2024-09-26 15:28:49,399: INFO: common: created directory at: artifacts/data_validation]
+[2024-09-26 15:56:54,561: INFO: stage_02_data_validation: >>>>>> stage Data Validation stage started <<<<<<]
+[2024-09-26 15:56:54,563: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-26 15:56:54,563: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-26 15:56:54,564: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-26 15:56:54,564: INFO: common: created directory at: artifacts]
+[2024-09-26 15:56:54,564: INFO: common: created directory at: artifacts/data_validation]
+[2024-09-26 15:56:54,565: ERROR: stage_02_data_validation: [Errno 2] No such file or directory: 'artifacts/data_ingestion/winequality-red.csv']
+Traceback (most recent call last):
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/pipeline/stage_02_data_validation", line 26, in <module>
+    obj.main()
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/pipeline/stage_02_data_validation", line 16, in main
+    data_validation.validate_all_columns()
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/components/data_validation.py", line 35, in validate_all_columns
+    raise e
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/components/data_validation.py", line 16, in validate_all_columns
+    data = pd.read_csv(self.config.unzip_data_dir)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_ingestion/winequality-red.csv'
+[2024-09-26 15:58:37,547: INFO: stage_02_data_validation: >>>>>> stage Data Validation stage started <<<<<<]
+[2024-09-26 15:58:37,549: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-26 15:58:37,549: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-26 15:58:37,550: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-26 15:58:37,550: INFO: common: created directory at: artifacts]
+[2024-09-26 15:58:37,550: INFO: common: created directory at: artifacts/data_validation]
+[2024-09-26 15:58:37,551: ERROR: stage_02_data_validation: [Errno 2] No such file or directory: 'artifacts/data_ingestion/winequality-red.csv']
+Traceback (most recent call last):
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/pipeline/stage_02_data_validation", line 26, in <module>
+    obj.main()
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/pipeline/stage_02_data_validation", line 16, in main
+    data_validation.validate_all_columns()
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/components/data_validation.py", line 35, in validate_all_columns
+    raise e
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/components/data_validation.py", line 16, in validate_all_columns
+    data = pd.read_csv(self.config.unzip_data_dir)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_ingestion/winequality-red.csv'
+[2024-09-26 16:09:43,636: INFO: stage_02_data_validation: >>>>>> stage Data Validation stage started <<<<<<]
+[2024-09-26 16:09:43,637: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-26 16:09:43,639: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-26 16:09:43,640: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-26 16:09:43,640: INFO: common: created directory at: artifacts]
+[2024-09-26 16:09:43,640: INFO: common: created directory at: artifacts/data_validation]
+[2024-09-26 16:09:43,641: ERROR: stage_02_data_validation: [Errno 2] No such file or directory: 'artifacts/data_ingestion/winequality-data.csv']
+Traceback (most recent call last):
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/pipeline/stage_02_data_validation", line 23, in <module>
+    obj.main()
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/pipeline/stage_02_data_validation", line 16, in main
+    data_validation.validate_all_columns()
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/components/data_validation.py", line 35, in validate_all_columns
+    raise e
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/components/data_validation.py", line 16, in validate_all_columns
+    data = pd.read_csv(self.config.unzip_data_dir)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_ingestion/winequality-data.csv'
+[2024-09-26 16:10:42,625: INFO: stage_02_data_validation: >>>>>> stage Data Validation stage started <<<<<<]
+[2024-09-26 16:10:42,627: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-26 16:10:42,627: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-26 16:10:42,628: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-26 16:10:42,628: INFO: common: created directory at: artifacts]
+[2024-09-26 16:10:42,628: INFO: common: created directory at: artifacts/data_validation]
+[2024-09-26 16:10:42,629: ERROR: stage_02_data_validation: [Errno 2] No such file or directory: 'artifacts/data_ingestion/winequality-red.csv']
+Traceback (most recent call last):
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/pipeline/stage_02_data_validation", line 23, in <module>
+    obj.main()
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/pipeline/stage_02_data_validation", line 16, in main
+    data_validation.validate_all_columns()
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/components/data_validation.py", line 35, in validate_all_columns
+    raise e
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/components/data_validation.py", line 16, in validate_all_columns
+    data = pd.read_csv(self.config.unzip_data_dir)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_ingestion/winequality-red.csv'
+[2024-09-26 16:11:40,283: INFO: stage_02_data_validation: >>>>>> stage Data Validation stage started <<<<<<]
+[2024-09-26 16:11:40,284: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-26 16:11:40,285: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-26 16:11:40,286: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-26 16:11:40,286: INFO: common: created directory at: artifacts]
+[2024-09-26 16:11:40,286: INFO: common: created directory at: artifacts/data_validation]
+[2024-09-26 16:11:40,286: ERROR: stage_02_data_validation: [Errno 2] No such file or directory: 'artifacts/data_ingestion/winequality-red.csv']
+Traceback (most recent call last):
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/pipeline/stage_02_data_validation", line 23, in <module>
+    obj.main()
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/pipeline/stage_02_data_validation", line 16, in main
+    data_validation.validate_all_columns()
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/components/data_validation.py", line 35, in validate_all_columns
+    raise e
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/components/data_validation.py", line 16, in validate_all_columns
+    data = pd.read_csv(self.config.unzip_data_dir)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_ingestion/winequality-red.csv'
+[2024-09-26 16:12:08,543: INFO: stage_02_data_validation: >>>>>> stage Data Validation stage started <<<<<<]
+[2024-09-26 16:12:08,544: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-26 16:12:08,545: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-26 16:12:08,546: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-26 16:12:08,546: INFO: common: created directory at: artifacts]
+[2024-09-26 16:12:08,546: INFO: common: created directory at: artifacts/data_validation]
+[2024-09-26 16:12:08,546: ERROR: stage_02_data_validation: [Errno 2] No such file or directory: 'artifacts/data_ingestion/winequality-data.csv']
+Traceback (most recent call last):
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/pipeline/stage_02_data_validation", line 23, in <module>
+    obj.main()
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/pipeline/stage_02_data_validation", line 16, in main
+    data_validation.validate_all_columns()
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/components/data_validation.py", line 35, in validate_all_columns
+    raise e
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/components/data_validation.py", line 16, in validate_all_columns
+    data = pd.read_csv(self.config.unzip_data_dir)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_ingestion/winequality-data.csv'
+[2024-09-26 16:12:48,390: INFO: stage_02_data_validation: >>>>>> stage Data Validation stage started <<<<<<]
+[2024-09-26 16:12:48,392: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-26 16:12:48,393: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-26 16:12:48,395: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-26 16:12:48,395: INFO: common: created directory at: artifacts]
+[2024-09-26 16:12:48,395: INFO: common: created directory at: artifacts/data_validation]
+[2024-09-26 16:12:48,396: ERROR: stage_02_data_validation: [Errno 2] No such file or directory: 'artifacts/data_ingestion/winequality-data.csv']
+Traceback (most recent call last):
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/pipeline/stage_02_data_validation", line 23, in <module>
+    obj.main()
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/pipeline/stage_02_data_validation", line 16, in main
+    data_validation.validate_all_columns()
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/components/data_validation.py", line 35, in validate_all_columns
+    raise e
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/components/data_validation.py", line 16, in validate_all_columns
+    data = pd.read_csv(self.config.unzip_data_dir)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_ingestion/winequality-data.csv'
+[2024-09-26 16:18:35,349: INFO: stage_02_data_validation: >>>>>> stage Data Validation stage started <<<<<<]
+[2024-09-26 16:18:35,351: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-26 16:18:35,351: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-26 16:18:35,352: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-26 16:18:35,352: INFO: common: created directory at: artifacts]
+[2024-09-26 16:18:35,353: INFO: common: created directory at: artifacts/data_validation]
+[2024-09-26 16:18:35,353: ERROR: stage_02_data_validation: [Errno 2] No such file or directory: 'artifacts/data_ingestion/winequality-red.csv']
+Traceback (most recent call last):
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/pipeline/stage_02_data_validation", line 23, in <module>
+    obj.main()
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/pipeline/stage_02_data_validation", line 16, in main
+    data_validation.validate_all_columns()
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/components/data_validation.py", line 35, in validate_all_columns
+    raise e
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/components/data_validation.py", line 16, in validate_all_columns
+    data = pd.read_csv(self.config.unzip_data_dir)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_ingestion/winequality-red.csv'
+[2024-09-26 16:20:35,004: INFO: stage_02_data_validation: >>>>>> stage Data Validation stage started <<<<<<]
+[2024-09-26 16:20:35,006: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-26 16:20:35,007: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-26 16:20:35,007: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-26 16:20:35,008: INFO: common: created directory at: artifacts]
+[2024-09-26 16:20:35,008: INFO: common: created directory at: artifacts/data_validation]
+[2024-09-26 16:20:35,008: ERROR: stage_02_data_validation: [Errno 2] No such file or directory: 'artifacts/data_ingestion/winequality-red.csv']
+Traceback (most recent call last):
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/pipeline/stage_02_data_validation", line 23, in <module>
+    obj.main()
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/pipeline/stage_02_data_validation", line 16, in main
+    data_validation.validate_all_columns()
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/components/data_validation.py", line 35, in validate_all_columns
+    raise e
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/components/data_validation.py", line 16, in validate_all_columns
+    data = pd.read_csv(self.config.unzip_data_dir)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_ingestion/winequality-red.csv'
+[2024-09-26 16:20:43,816: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-09-26 16:20:43,818: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-26 16:20:43,819: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-26 16:20:43,820: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-26 16:20:43,820: INFO: common: created directory at: artifacts]
+[2024-09-26 16:20:43,820: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-09-26 16:20:44,536: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: DD92:1BA4DE:80EDA:8B407:66F5D02C
+Accept-Ranges: bytes
+Date: Thu, 26 Sep 2024 21:20:44 GMT
+Via: 1.1 varnish
+X-Served-By: cache-dfw-kdfw8210125-DFW
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1727385644.431398,VS0,VE117
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: d198095b751278f91d3d74548ec2f8760bfecc1a
+Expires: Thu, 26 Sep 2024 21:25:44 GMT
+Source-Age: 0
+
+]
+[2024-09-26 16:20:44,539: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-09-26 16:20:55,339: INFO: stage_02_data_validation: >>>>>> stage Data Validation stage started <<<<<<]
+[2024-09-26 16:20:55,341: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-26 16:20:55,341: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-26 16:20:55,342: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-26 16:20:55,342: INFO: common: created directory at: artifacts]
+[2024-09-26 16:20:55,342: INFO: common: created directory at: artifacts/data_validation]
+[2024-09-26 16:20:55,348: INFO: stage_02_data_validation: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2024-09-26 16:29:01,371: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-09-26 16:29:01,373: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-26 16:29:01,374: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-26 16:29:01,375: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-26 16:29:01,375: INFO: common: created directory at: artifacts]
+[2024-09-26 16:29:01,375: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-09-26 16:29:01,375: INFO: data_ingestion: File already exists of size: ~ 23 KB]
+[2024-09-26 16:29:01,377: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-09-26 16:29:01,377: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2024-09-26 16:29:01,378: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-26 16:29:01,378: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-26 16:29:01,379: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-26 16:29:01,379: INFO: common: created directory at: artifacts]
+[2024-09-26 16:29:01,379: INFO: common: created directory at: artifacts/data_validation]
+[2024-09-26 16:29:01,386: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2024-09-26 21:57:27,751: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-26 21:57:27,755: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-26 21:57:27,759: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-26 21:57:27,759: INFO: common: created directory at: artifacts]
+[2024-09-26 21:58:17,489: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-26 21:58:17,491: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-26 21:58:17,493: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-26 21:58:17,494: INFO: common: created directory at: artifacts]
+[2024-09-26 21:58:17,495: INFO: common: created directory at: artifacts/data_transformation]
+[2024-09-26 21:58:17,565: INFO: 3968503800: solited data into training and test sets]
+[2024-09-26 21:58:17,566: INFO: 3968503800: (1199, 12)]
+[2024-09-26 21:58:17,566: INFO: 3968503800: (400, 12)]
+[2024-09-26 23:12:07,104: INFO: stage_03_data_transformation: >>>>>> stageData Transformation stage started <<<<<<]
+[2024-09-26 23:12:07,104: INFO: stage_03_data_transformation: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x========x]
+[2024-09-27 11:25:25,294: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-09-27 11:25:25,296: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-27 11:25:25,296: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-27 11:25:25,297: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-27 11:25:25,297: INFO: common: created directory at: artifacts]
+[2024-09-27 11:25:25,298: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-09-27 11:25:26,031: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 7BDC:2361F2:74EAD6:7E73CC:66F6DC75
+Accept-Ranges: bytes
+Date: Fri, 27 Sep 2024 16:25:26 GMT
+Via: 1.1 varnish
+X-Served-By: cache-dfw-kdfw8210130-DFW
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1727454326.980439,VS0,VE133
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 0bafd59a6eda372cd193fe862b292961cb638ee7
+Expires: Fri, 27 Sep 2024 16:30:26 GMT
+Source-Age: 0
+
+]
+[2024-09-27 11:25:26,032: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-09-27 11:25:26,032: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2024-09-27 11:25:26,034: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-27 11:25:26,034: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-27 11:25:26,035: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-27 11:25:26,035: INFO: common: created directory at: artifacts]
+[2024-09-27 11:25:26,036: INFO: common: created directory at: artifacts/data_validation]
+[2024-09-27 11:25:26,042: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2024-09-27 11:25:26,042: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2024-09-27 11:25:26,044: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-27 11:25:26,044: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-27 11:25:26,045: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-27 11:25:26,045: INFO: common: created directory at: artifacts]
+[2024-09-27 11:25:26,045: INFO: common: created directory at: artifacts/data_transformation]
+[2024-09-27 11:25:26,045: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2024-09-27 13:12:26,100: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-27 13:12:26,103: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-27 13:12:26,106: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-27 13:14:30,594: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-27 13:14:30,597: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-27 13:14:30,600: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-27 13:14:30,601: INFO: common: created directory at: artifacts]
+[2024-09-27 13:14:30,602: INFO: common: created directory at: artifacts/model_trainer]
+[2024-09-27 13:15:18,193: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-27 13:15:18,195: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-27 13:15:18,198: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-27 13:15:18,198: INFO: common: created directory at: artifacts]
+[2024-09-27 13:15:18,199: INFO: common: created directory at: artifacts/model_trainer]
+[2024-09-27 13:17:51,657: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-27 13:17:51,660: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-27 13:17:51,663: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-27 13:17:51,663: INFO: common: created directory at: artifacts]
+[2024-09-27 13:17:51,665: INFO: common: created directory at: artifacts/model_trainer]
+[2024-09-27 13:19:31,905: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-27 13:19:31,908: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-27 13:19:31,911: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-27 13:19:31,913: INFO: common: created directory at: artifacts]
+[2024-09-27 13:19:31,915: INFO: common: created directory at: artifacts/model_trainer]
+[2024-09-27 13:22:23,935: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-09-27 13:22:23,937: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-27 13:22:23,938: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-27 13:22:23,939: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-27 13:22:23,939: INFO: common: created directory at: artifacts]
+[2024-09-27 13:22:23,939: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-09-27 13:22:23,939: INFO: data_ingestion: File already exists of size: ~ 23 KB]
+[2024-09-27 13:22:23,942: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-09-27 13:22:23,942: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2024-09-27 13:22:23,943: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-27 13:22:23,943: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-27 13:22:23,944: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-27 13:22:23,944: INFO: common: created directory at: artifacts]
+[2024-09-27 13:22:23,944: INFO: common: created directory at: artifacts/data_validation]
+[2024-09-27 13:22:23,952: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2024-09-27 13:22:23,952: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2024-09-27 13:22:23,954: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-27 13:22:23,954: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-27 13:22:23,955: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-27 13:22:23,955: INFO: common: created directory at: artifacts]
+[2024-09-27 13:22:23,955: INFO: common: created directory at: artifacts/data_transformation]
+[2024-09-27 13:22:23,955: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2024-09-27 13:25:24,844: INFO: stage_03_data_transformation: >>>>>> stageData Transformation stage started <<<<<<]
+[2024-09-27 13:25:24,845: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-27 13:25:24,846: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-27 13:25:24,847: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-27 13:25:24,847: INFO: common: created directory at: artifacts]
+[2024-09-27 13:25:24,847: INFO: common: created directory at: artifacts/data_transformation]
+[2024-09-27 13:25:24,860: INFO: data_transformation: solited data into training and test sets]
+[2024-09-27 13:25:24,860: INFO: data_transformation: (1199, 12)]
+[2024-09-27 13:25:24,860: INFO: data_transformation: (400, 12)]
+[2024-09-27 13:25:24,860: INFO: stage_03_data_transformation: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x========x]
+[2024-09-27 13:25:30,514: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-09-27 13:25:30,515: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-27 13:25:30,516: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-27 13:25:30,517: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-27 13:25:30,517: INFO: common: created directory at: artifacts]
+[2024-09-27 13:25:30,517: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-09-27 13:25:30,517: INFO: data_ingestion: File already exists of size: ~ 23 KB]
+[2024-09-27 13:25:30,519: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-09-27 13:25:30,519: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2024-09-27 13:25:30,520: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-27 13:25:30,520: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-27 13:25:30,521: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-27 13:25:30,521: INFO: common: created directory at: artifacts]
+[2024-09-27 13:25:30,521: INFO: common: created directory at: artifacts/data_validation]
+[2024-09-27 13:25:30,526: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2024-09-27 13:25:30,526: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2024-09-27 13:25:30,528: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-27 13:25:30,528: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-27 13:25:30,529: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-27 13:25:30,529: INFO: common: created directory at: artifacts]
+[2024-09-27 13:25:30,529: INFO: common: created directory at: artifacts/data_transformation]
+[2024-09-27 13:25:30,538: INFO: data_transformation: solited data into training and test sets]
+[2024-09-27 13:25:30,538: INFO: data_transformation: (1199, 12)]
+[2024-09-27 13:25:30,538: INFO: data_transformation: (400, 12)]
+[2024-09-27 13:25:30,538: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2024-09-27 13:25:44,702: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-27 13:25:44,704: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-27 13:25:44,706: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-27 13:25:44,707: INFO: common: created directory at: artifacts]
+[2024-09-27 13:25:44,708: INFO: common: created directory at: artifacts/model_trainer]
+[2024-09-27 13:26:01,593: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-27 13:26:01,594: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-27 13:26:01,596: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-27 13:26:01,597: INFO: common: created directory at: artifacts]
+[2024-09-27 13:26:01,597: INFO: common: created directory at: artifacts/model_trainer]
+[2024-09-27 13:29:39,555: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-09-27 13:29:39,556: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-27 13:29:39,557: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-27 13:29:39,558: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-27 13:29:39,558: INFO: common: created directory at: artifacts]
+[2024-09-27 13:29:39,558: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-09-27 13:29:39,558: INFO: data_ingestion: File already exists of size: ~ 23 KB]
+[2024-09-27 13:29:39,560: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-09-27 13:29:39,560: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2024-09-27 13:29:39,561: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-27 13:29:39,561: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-27 13:29:39,562: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-27 13:29:39,562: INFO: common: created directory at: artifacts]
+[2024-09-27 13:29:39,562: INFO: common: created directory at: artifacts/data_validation]
+[2024-09-27 13:29:39,565: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2024-09-27 13:29:39,565: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2024-09-27 13:29:39,566: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-27 13:29:39,567: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-27 13:29:39,568: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-27 13:29:39,568: INFO: common: created directory at: artifacts]
+[2024-09-27 13:29:39,568: INFO: common: created directory at: artifacts/data_transformation]
+[2024-09-27 13:29:39,581: INFO: data_transformation: solited data into training and test sets]
+[2024-09-27 13:29:39,581: INFO: data_transformation: (1199, 12)]
+[2024-09-27 13:29:39,581: INFO: data_transformation: (400, 12)]
+[2024-09-27 13:29:39,581: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2024-09-27 13:29:39,581: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2024-09-27 13:29:39,581: ERROR: main: name 'ModelTrainerTrainingPipeline' is not defined]
+Traceback (most recent call last):
+  File "/Users/sudipkhadka/Desktop/Semantic-search/main.py", line 39, in <module>
+    data_ingestion = ModelTrainerTrainingPipeline()
+NameError: name 'ModelTrainerTrainingPipeline' is not defined
+[2024-09-27 13:42:12,323: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-09-27 13:42:12,325: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-27 13:42:12,326: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-27 13:42:12,327: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-27 13:42:12,327: INFO: common: created directory at: artifacts]
+[2024-09-27 13:42:12,327: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-09-27 13:42:13,099: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: E43C:3CEFDA:8EEFB5:9A5B3E:66F6FC82
+Accept-Ranges: bytes
+Date: Fri, 27 Sep 2024 18:42:13 GMT
+Via: 1.1 varnish
+X-Served-By: cache-dfw-kdfw8210099-DFW
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1727462533.918989,VS0,VE163
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: a9ef5ecc41a0fd5ef07383ec981f8cf98584d5f7
+Expires: Fri, 27 Sep 2024 18:47:13 GMT
+Source-Age: 0
+
+]
+[2024-09-27 13:42:13,102: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-09-27 13:42:13,102: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2024-09-27 13:42:13,106: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-27 13:42:13,107: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-27 13:42:13,109: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-27 13:42:13,110: INFO: common: created directory at: artifacts]
+[2024-09-27 13:42:13,110: INFO: common: created directory at: artifacts/data_validation]
+[2024-09-27 13:42:13,116: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2024-09-27 13:42:13,116: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2024-09-27 13:42:13,119: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-27 13:42:13,119: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-27 13:42:13,121: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-27 13:42:13,122: INFO: common: created directory at: artifacts]
+[2024-09-27 13:42:13,122: INFO: common: created directory at: artifacts/data_transformation]
+[2024-09-27 13:42:13,138: INFO: data_transformation: solited data into training and test sets]
+[2024-09-27 13:42:13,138: INFO: data_transformation: (1199, 12)]
+[2024-09-27 13:42:13,138: INFO: data_transformation: (400, 12)]
+[2024-09-27 13:42:13,138: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2024-09-27 13:42:13,138: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2024-09-27 13:42:13,141: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-27 13:42:13,141: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-27 13:42:13,142: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-27 13:42:13,143: INFO: common: created directory at: artifacts]
+[2024-09-27 13:42:13,143: INFO: common: created directory at: artifacts/model_trainer]
+[2024-09-27 13:42:13,156: INFO: main: >>>>>> stage Model Trainer stage completed <<<<<<
+
+x=========x]
+[2024-09-27 17:04:12,907: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-27 17:04:12,912: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-27 17:04:12,916: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-27 17:04:12,917: INFO: common: created directory at: artifacts]
+[2024-09-27 17:04:12,918: INFO: common: created directory at: artifacts/model_evaluation]
+[2024-09-27 17:05:53,475: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-27 17:05:53,478: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-27 17:05:53,480: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-27 17:05:53,482: INFO: common: created directory at: artifacts]
+[2024-09-27 17:05:53,482: INFO: common: created directory at: artifacts/model_evaluation]
+[2024-09-27 17:08:06,664: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-27 17:08:06,666: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-27 17:08:06,669: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-27 17:08:06,670: INFO: common: created directory at: artifacts]
+[2024-09-27 17:08:06,670: INFO: common: created directory at: artifacts/model_evaluation]
+[2024-09-27 17:13:16,342: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-27 17:13:16,344: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-27 17:13:16,347: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-27 17:13:16,348: INFO: common: created directory at: artifacts]
+[2024-09-27 17:13:16,349: INFO: common: created directory at: artifacts/model_evaluation]
+[2024-09-27 17:14:06,150: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-27 17:14:06,152: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-27 17:14:06,155: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-27 17:14:06,156: INFO: common: created directory at: artifacts]
+[2024-09-27 17:14:06,157: INFO: common: created directory at: artifacts/model_evaluation]
+[2024-09-27 17:14:46,502: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-27 17:14:46,504: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-27 17:14:46,507: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-27 17:14:46,508: INFO: common: created directory at: artifacts]
+[2024-09-27 17:14:46,509: INFO: common: created directory at: artifacts/model_evaluation]
+[2024-09-27 17:16:08,263: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-27 17:16:08,266: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-27 17:16:08,268: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-27 17:16:08,270: INFO: common: created directory at: artifacts]
+[2024-09-27 17:16:08,272: INFO: common: created directory at: artifacts/model_evaluation]
+[2024-09-27 17:16:27,580: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-27 17:16:27,582: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-27 17:16:27,585: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-27 17:16:27,585: INFO: common: created directory at: artifacts]
+[2024-09-27 17:16:27,586: INFO: common: created directory at: artifacts/model_evaluation]
+[2024-09-27 17:31:14,644: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-27 17:31:14,646: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-27 17:31:14,649: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-27 17:31:14,650: INFO: common: created directory at: artifacts]
+[2024-09-27 17:31:14,651: INFO: common: created directory at: artifacts/model_evaluation]
+[2024-09-27 17:33:40,676: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-27 17:33:40,679: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-27 17:33:40,681: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-27 17:33:40,682: INFO: common: created directory at: artifacts]
+[2024-09-27 17:33:40,683: INFO: common: created directory at: artifacts/model_evaluation]
+[2024-09-27 17:42:17,991: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-27 17:42:17,995: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-27 17:42:17,997: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-27 17:42:17,999: INFO: common: created directory at: artifacts]
+[2024-09-27 17:42:17,999: INFO: common: created directory at: artifacts/model_evaluation]
+[2024-09-27 17:42:18,523: INFO: common: json file saved at: artifacts/model_evaluation/metrics.json]
+[2024-09-28 12:54:12,131: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-09-28 12:54:12,133: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 12:54:12,133: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 12:54:12,134: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 12:54:12,134: INFO: common: created directory at: artifacts]
+[2024-09-28 12:54:12,134: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-09-28 12:54:12,134: INFO: data_ingestion: File already exists of size: ~ 23 KB]
+[2024-09-28 12:54:12,136: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-09-28 12:54:12,136: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2024-09-28 12:54:12,137: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 12:54:12,137: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 12:54:12,138: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 12:54:12,138: INFO: common: created directory at: artifacts]
+[2024-09-28 12:54:12,138: INFO: common: created directory at: artifacts/data_validation]
+[2024-09-28 12:54:12,144: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2024-09-28 12:54:12,144: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2024-09-28 12:54:12,145: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 12:54:12,145: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 12:54:12,146: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 12:54:12,146: INFO: common: created directory at: artifacts]
+[2024-09-28 12:54:12,146: INFO: common: created directory at: artifacts/data_transformation]
+[2024-09-28 12:54:12,156: INFO: data_transformation: solited data into training and test sets]
+[2024-09-28 12:54:12,156: INFO: data_transformation: (1199, 12)]
+[2024-09-28 12:54:12,156: INFO: data_transformation: (400, 12)]
+[2024-09-28 12:54:12,156: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2024-09-28 12:54:12,156: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2024-09-28 12:54:12,158: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 12:54:12,158: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 12:54:12,159: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 12:54:12,159: INFO: common: created directory at: artifacts]
+[2024-09-28 12:54:12,159: INFO: common: created directory at: artifacts/model_trainer]
+[2024-09-28 12:54:12,167: INFO: main: >>>>>> stage Model Trainer stage completed <<<<<<
+
+x=========x]
+[2024-09-28 12:56:02,199: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-09-28 12:56:02,201: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 12:56:02,201: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 12:56:02,202: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 12:56:02,202: INFO: common: created directory at: artifacts]
+[2024-09-28 12:56:02,203: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-09-28 12:56:02,203: INFO: data_ingestion: File already exists of size: ~ 23 KB]
+[2024-09-28 12:56:02,204: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-09-28 12:56:02,204: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2024-09-28 12:56:02,205: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 12:56:02,205: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 12:56:02,206: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 12:56:02,206: INFO: common: created directory at: artifacts]
+[2024-09-28 12:56:02,206: INFO: common: created directory at: artifacts/data_validation]
+[2024-09-28 12:56:02,209: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2024-09-28 12:56:02,209: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2024-09-28 12:56:02,210: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 12:56:02,210: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 12:56:02,211: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 12:56:02,211: INFO: common: created directory at: artifacts]
+[2024-09-28 12:56:02,211: INFO: common: created directory at: artifacts/data_transformation]
+[2024-09-28 12:56:02,222: INFO: data_transformation: solited data into training and test sets]
+[2024-09-28 12:56:02,222: INFO: data_transformation: (1199, 12)]
+[2024-09-28 12:56:02,222: INFO: data_transformation: (400, 12)]
+[2024-09-28 12:56:02,222: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2024-09-28 12:56:02,222: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2024-09-28 12:56:02,223: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 12:56:02,223: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 12:56:02,224: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 12:56:02,224: INFO: common: created directory at: artifacts]
+[2024-09-28 12:56:02,224: INFO: common: created directory at: artifacts/model_trainer]
+[2024-09-28 12:56:02,228: INFO: main: >>>>>> stage Model Trainer stage completed <<<<<<
+
+x=========x]
+[2024-09-28 12:57:05,249: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 12:57:05,254: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 12:57:05,257: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 12:57:05,258: INFO: common: created directory at: artifacts]
+[2024-09-28 12:57:05,258: INFO: common: created directory at: artifacts/model_evaluation]
+[2024-09-28 12:57:05,324: WARNING: connectionpool: Retrying (Retry(total=4, connect=5, read=4, redirect=5, status=5)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /sudkc37/Semantic-search.mlflow/api/2.0/mlflow/runs/create]
+[2024-09-28 12:57:05,645: INFO: common: json file saved at: artifacts/model_evaluation/metrics.json]
+[2024-09-28 12:58:27,605: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 12:58:27,607: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 12:58:27,610: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 12:58:27,610: INFO: common: created directory at: artifacts]
+[2024-09-28 12:58:27,611: INFO: common: created directory at: artifacts/model_evaluation]
+[2024-09-28 12:58:27,774: INFO: common: json file saved at: artifacts/model_evaluation/metrics.json]
+[2024-09-28 14:20:04,679: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-09-28 14:20:04,681: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 14:20:04,681: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 14:20:04,682: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 14:20:04,682: INFO: common: created directory at: artifacts]
+[2024-09-28 14:20:04,682: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-09-28 14:20:05,429: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 2DDA:2361F2:12E8080:147B0A9:66F856E2
+Accept-Ranges: bytes
+Date: Sat, 28 Sep 2024 19:20:05 GMT
+Via: 1.1 varnish
+X-Served-By: cache-dfw-kdfw8210096-DFW
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1727551205.266707,VS0,VE170
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 3b892cda642ea5a87cfb3e712d0a8cf20f921d08
+Expires: Sat, 28 Sep 2024 19:25:05 GMT
+Source-Age: 0
+
+]
+[2024-09-28 14:20:05,432: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-09-28 14:20:05,432: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2024-09-28 14:20:05,435: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 14:20:05,436: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 14:20:05,438: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 14:20:05,438: INFO: common: created directory at: artifacts]
+[2024-09-28 14:20:05,438: INFO: common: created directory at: artifacts/data_validation]
+[2024-09-28 14:20:05,447: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2024-09-28 14:20:05,447: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2024-09-28 14:20:05,451: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 14:20:05,451: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 14:20:05,453: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 14:20:05,453: INFO: common: created directory at: artifacts]
+[2024-09-28 14:20:05,453: INFO: common: created directory at: artifacts/data_transformation]
+[2024-09-28 14:20:05,473: INFO: data_transformation: solited data into training and test sets]
+[2024-09-28 14:20:05,473: INFO: data_transformation: (1199, 12)]
+[2024-09-28 14:20:05,473: INFO: data_transformation: (400, 12)]
+[2024-09-28 14:20:05,473: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2024-09-28 14:20:05,474: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2024-09-28 14:20:05,475: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 14:20:05,476: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 14:20:05,477: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 14:20:05,477: INFO: common: created directory at: artifacts]
+[2024-09-28 14:20:05,477: INFO: common: created directory at: artifacts/model_trainer]
+[2024-09-28 14:20:05,489: INFO: main: >>>>>> stage Model Trainer stage completed <<<<<<
+
+x=========x]
+[2024-09-28 14:20:05,489: INFO: main: >>>>>> stage Model evaluation stage started <<<<<<]
+[2024-09-28 14:20:05,491: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 14:20:05,491: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 14:20:05,492: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 14:20:05,492: INFO: common: created directory at: artifacts]
+[2024-09-28 14:20:05,493: INFO: common: created directory at: artifacts/model_evaluation]
+[2024-09-28 14:20:05,932: INFO: common: json file saved at: artifacts/model_evaluation/metrics.json]
+[2024-09-28 14:20:11,281: ERROR: main: API request to endpoint /api/2.0/mlflow/registered-models/create failed with error code 403 != 200. Response body: '']
+Traceback (most recent call last):
+  File "/Users/sudipkhadka/Desktop/Semantic-search/main.py", line 53, in <module>
+    data_ingestion.main()
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/pipeline/stage_05_model_evaluation.py", line 15, in main
+    model_evaluation_config.log_into_mlflow()
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/components/model_evaluation.py", line 62, in log_into_mlflow
+    mlflow.sklearn.log_model(model, "model", registered_model_name="ElasticnetModel")
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/sklearn/__init__.py", line 424, in log_model
+    return Model.log(
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/models/model.py", line 562, in log
+    mlflow.register_model(
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/tracking/_model_registry/fluent.py", line 77, in register_model
+    raise e
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/tracking/_model_registry/fluent.py", line 68, in register_model
+    create_model_response = client.create_registered_model(name)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/tracking/client.py", line 1743, in create_registered_model
+    return self._get_registry_client().create_registered_model(name, tags, description)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/tracking/_model_registry/client.py", line 63, in create_registered_model
+    return self.store.create_registered_model(name, tags, description)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/store/model_registry/rest_store.py", line 75, in create_registered_model
+    response_proto = self._call_endpoint(CreateRegisteredModel, req_body)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/store/model_registry/base_rest_store.py", line 42, in _call_endpoint
+    return call_endpoint(self.get_host_creds(), endpoint, method, json_body, response_proto)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/utils/rest_utils.py", line 281, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/utils/rest_utils.py", line 213, in verify_rest_response
+    raise MlflowException(
+mlflow.exceptions.MlflowException: API request to endpoint /api/2.0/mlflow/registered-models/create failed with error code 403 != 200. Response body: ''
+[2024-09-28 14:22:49,379: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-09-28 14:22:49,380: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 14:22:49,381: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 14:22:49,382: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 14:22:49,382: INFO: common: created directory at: artifacts]
+[2024-09-28 14:22:49,382: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-09-28 14:22:49,382: INFO: data_ingestion: File already exists of size: ~ 23 KB]
+[2024-09-28 14:22:49,383: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-09-28 14:22:49,383: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2024-09-28 14:22:49,385: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 14:22:49,385: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 14:22:49,386: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 14:22:49,386: INFO: common: created directory at: artifacts]
+[2024-09-28 14:22:49,386: INFO: common: created directory at: artifacts/data_validation]
+[2024-09-28 14:22:49,388: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2024-09-28 14:22:49,388: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2024-09-28 14:22:49,390: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 14:22:49,390: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 14:22:49,391: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 14:22:49,391: INFO: common: created directory at: artifacts]
+[2024-09-28 14:22:49,391: INFO: common: created directory at: artifacts/data_transformation]
+[2024-09-28 14:22:49,399: INFO: data_transformation: solited data into training and test sets]
+[2024-09-28 14:22:49,399: INFO: data_transformation: (1199, 12)]
+[2024-09-28 14:22:49,399: INFO: data_transformation: (400, 12)]
+[2024-09-28 14:22:49,399: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2024-09-28 14:22:49,399: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2024-09-28 14:22:49,400: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 14:22:49,400: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 14:22:49,401: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 14:22:49,401: INFO: common: created directory at: artifacts]
+[2024-09-28 14:22:49,401: INFO: common: created directory at: artifacts/model_trainer]
+[2024-09-28 14:22:49,405: INFO: main: >>>>>> stage Model Trainer stage completed <<<<<<
+
+x=========x]
+[2024-09-28 14:22:49,405: INFO: main: >>>>>> stage Model evaluation stage started <<<<<<]
+[2024-09-28 14:22:49,406: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 14:22:49,406: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 14:22:49,407: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 14:22:49,407: INFO: common: created directory at: artifacts]
+[2024-09-28 14:22:49,407: INFO: common: created directory at: artifacts/model_evaluation]
+[2024-09-28 14:22:49,837: INFO: common: json file saved at: artifacts/model_evaluation/metrics.json]
+[2024-09-28 14:22:55,240: ERROR: main: API request to endpoint /api/2.0/mlflow/registered-models/create failed with error code 403 != 200. Response body: '']
+Traceback (most recent call last):
+  File "/Users/sudipkhadka/Desktop/Semantic-search/main.py", line 53, in <module>
+    data_ingestion.main()
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/pipeline/stage_05_model_evaluation.py", line 15, in main
+    model_evaluation_config.log_into_mlflow()
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/components/model_evaluation.py", line 62, in log_into_mlflow
+    mlflow.sklearn.log_model(model, "model", registered_model_name="ElasticnetModel")
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/sklearn/__init__.py", line 424, in log_model
+    return Model.log(
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/models/model.py", line 562, in log
+    mlflow.register_model(
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/tracking/_model_registry/fluent.py", line 77, in register_model
+    raise e
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/tracking/_model_registry/fluent.py", line 68, in register_model
+    create_model_response = client.create_registered_model(name)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/tracking/client.py", line 1743, in create_registered_model
+    return self._get_registry_client().create_registered_model(name, tags, description)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/tracking/_model_registry/client.py", line 63, in create_registered_model
+    return self.store.create_registered_model(name, tags, description)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/store/model_registry/rest_store.py", line 75, in create_registered_model
+    response_proto = self._call_endpoint(CreateRegisteredModel, req_body)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/store/model_registry/base_rest_store.py", line 42, in _call_endpoint
+    return call_endpoint(self.get_host_creds(), endpoint, method, json_body, response_proto)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/utils/rest_utils.py", line 281, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/utils/rest_utils.py", line 213, in verify_rest_response
+    raise MlflowException(
+mlflow.exceptions.MlflowException: API request to endpoint /api/2.0/mlflow/registered-models/create failed with error code 403 != 200. Response body: ''
+[2024-09-28 14:30:20,165: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-09-28 14:30:20,166: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 14:30:20,167: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 14:30:20,168: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 14:30:20,168: INFO: common: created directory at: artifacts]
+[2024-09-28 14:30:20,168: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-09-28 14:30:20,168: INFO: data_ingestion: File already exists of size: ~ 23 KB]
+[2024-09-28 14:30:20,169: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-09-28 14:30:20,169: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2024-09-28 14:30:20,170: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 14:30:20,171: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 14:30:20,172: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 14:30:20,172: INFO: common: created directory at: artifacts]
+[2024-09-28 14:30:20,172: INFO: common: created directory at: artifacts/data_validation]
+[2024-09-28 14:30:20,174: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2024-09-28 14:30:20,174: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2024-09-28 14:30:20,175: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 14:30:20,176: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 14:30:20,176: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 14:30:20,176: INFO: common: created directory at: artifacts]
+[2024-09-28 14:30:20,177: INFO: common: created directory at: artifacts/data_transformation]
+[2024-09-28 14:30:20,184: INFO: data_transformation: solited data into training and test sets]
+[2024-09-28 14:30:20,184: INFO: data_transformation: (1199, 12)]
+[2024-09-28 14:30:20,184: INFO: data_transformation: (400, 12)]
+[2024-09-28 14:30:20,184: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2024-09-28 14:30:20,184: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2024-09-28 14:30:20,186: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 14:30:20,186: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 14:30:20,187: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 14:30:20,187: INFO: common: created directory at: artifacts]
+[2024-09-28 14:30:20,187: INFO: common: created directory at: artifacts/model_trainer]
+[2024-09-28 14:30:20,191: INFO: main: >>>>>> stage Model Trainer stage completed <<<<<<
+
+x=========x]
+[2024-09-28 14:30:20,191: INFO: main: >>>>>> stage Model evaluation stage started <<<<<<]
+[2024-09-28 14:30:20,192: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 14:30:20,193: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 14:30:20,193: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 14:30:20,194: INFO: common: created directory at: artifacts]
+[2024-09-28 14:30:20,194: INFO: common: created directory at: artifacts/model_evaluation]
+[2024-09-28 14:30:20,619: ERROR: main: INVALID_PARAMETER_VALUE: Response: {'error_code': 'INVALID_PARAMETER_VALUE'}]
+Traceback (most recent call last):
+  File "/Users/sudipkhadka/Desktop/Semantic-search/main.py", line 53, in <module>
+    data_ingestion.main()
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/pipeline/stage_05_model_evaluation.py", line 15, in main
+    model_evaluation_config.log_into_mlflow()
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/components/model_evaluation.py", line 41, in log_into_mlflow
+    with mlflow.start_run():
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/tracking/fluent.py", line 350, in start_run
+    active_run_obj = client.create_run(
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/tracking/client.py", line 275, in create_run
+    return self._tracking_client.create_run(experiment_id, start_time, tags, run_name)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/tracking/_tracking_service/client.py", line 131, in create_run
+    return self.store.create_run(
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/store/tracking/rest_store.py", line 175, in create_run
+    response_proto = self._call_endpoint(CreateRun, req_body)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/store/tracking/rest_store.py", line 56, in _call_endpoint
+    return call_endpoint(self.get_host_creds(), endpoint, method, json_body, response_proto)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/utils/rest_utils.py", line 281, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/utils/rest_utils.py", line 207, in verify_rest_response
+    raise RestException(json.loads(response.text))
+mlflow.exceptions.RestException: INVALID_PARAMETER_VALUE: Response: {'error_code': 'INVALID_PARAMETER_VALUE'}
+[2024-09-28 14:34:27,618: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-09-28 14:34:27,620: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 14:34:27,621: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 14:34:27,621: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 14:34:27,622: INFO: common: created directory at: artifacts]
+[2024-09-28 14:34:27,622: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-09-28 14:34:27,622: INFO: data_ingestion: File already exists of size: ~ 23 KB]
+[2024-09-28 14:34:27,623: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-09-28 14:34:27,623: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2024-09-28 14:34:27,624: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 14:34:27,624: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 14:34:27,625: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 14:34:27,625: INFO: common: created directory at: artifacts]
+[2024-09-28 14:34:27,625: INFO: common: created directory at: artifacts/data_validation]
+[2024-09-28 14:34:27,628: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2024-09-28 14:34:27,628: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2024-09-28 14:34:27,629: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 14:34:27,629: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 14:34:27,630: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 14:34:27,630: INFO: common: created directory at: artifacts]
+[2024-09-28 14:34:27,630: INFO: common: created directory at: artifacts/data_transformation]
+[2024-09-28 14:34:27,640: INFO: data_transformation: solited data into training and test sets]
+[2024-09-28 14:34:27,640: INFO: data_transformation: (1199, 12)]
+[2024-09-28 14:34:27,640: INFO: data_transformation: (400, 12)]
+[2024-09-28 14:34:27,640: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2024-09-28 14:34:27,640: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2024-09-28 14:34:27,641: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 14:34:27,641: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 14:34:27,642: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 14:34:27,642: INFO: common: created directory at: artifacts]
+[2024-09-28 14:34:27,642: INFO: common: created directory at: artifacts/model_trainer]
+[2024-09-28 14:34:27,650: INFO: main: >>>>>> stage Model Trainer stage completed <<<<<<
+
+x=========x]
+[2024-09-28 14:34:27,650: INFO: main: >>>>>> stage Model evaluation stage started <<<<<<]
+[2024-09-28 14:34:27,651: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 14:34:27,652: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 14:34:27,652: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 14:34:27,653: INFO: common: created directory at: artifacts]
+[2024-09-28 14:34:27,653: INFO: common: created directory at: artifacts/model_evaluation]
+[2024-09-28 14:34:28,082: ERROR: main: INVALID_PARAMETER_VALUE: Response: {'error_code': 'INVALID_PARAMETER_VALUE'}]
+Traceback (most recent call last):
+  File "/Users/sudipkhadka/Desktop/Semantic-search/main.py", line 53, in <module>
+    data_ingestion.main()
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/pipeline/stage_05_model_evaluation.py", line 15, in main
+    model_evaluation_config.log_into_mlflow()
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/components/model_evaluation.py", line 41, in log_into_mlflow
+    with mlflow.start_run():
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/tracking/fluent.py", line 350, in start_run
+    active_run_obj = client.create_run(
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/tracking/client.py", line 275, in create_run
+    return self._tracking_client.create_run(experiment_id, start_time, tags, run_name)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/tracking/_tracking_service/client.py", line 131, in create_run
+    return self.store.create_run(
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/store/tracking/rest_store.py", line 175, in create_run
+    response_proto = self._call_endpoint(CreateRun, req_body)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/store/tracking/rest_store.py", line 56, in _call_endpoint
+    return call_endpoint(self.get_host_creds(), endpoint, method, json_body, response_proto)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/utils/rest_utils.py", line 281, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/utils/rest_utils.py", line 207, in verify_rest_response
+    raise RestException(json.loads(response.text))
+mlflow.exceptions.RestException: INVALID_PARAMETER_VALUE: Response: {'error_code': 'INVALID_PARAMETER_VALUE'}
+[2024-09-28 14:45:05,938: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-09-28 14:45:05,940: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 14:45:05,940: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 14:45:05,941: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 14:45:05,941: INFO: common: created directory at: artifacts]
+[2024-09-28 14:45:05,941: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-09-28 14:45:05,941: INFO: data_ingestion: File already exists of size: ~ 23 KB]
+[2024-09-28 14:45:05,943: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-09-28 14:45:05,943: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2024-09-28 14:45:05,944: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 14:45:05,944: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 14:45:05,945: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 14:45:05,945: INFO: common: created directory at: artifacts]
+[2024-09-28 14:45:05,945: INFO: common: created directory at: artifacts/data_validation]
+[2024-09-28 14:45:05,948: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2024-09-28 14:45:05,948: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2024-09-28 14:45:05,949: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 14:45:05,950: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 14:45:05,950: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 14:45:05,951: INFO: common: created directory at: artifacts]
+[2024-09-28 14:45:05,951: INFO: common: created directory at: artifacts/data_transformation]
+[2024-09-28 14:45:05,960: INFO: data_transformation: solited data into training and test sets]
+[2024-09-28 14:45:05,960: INFO: data_transformation: (1199, 12)]
+[2024-09-28 14:45:05,960: INFO: data_transformation: (400, 12)]
+[2024-09-28 14:45:05,960: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2024-09-28 14:45:05,960: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2024-09-28 14:45:05,962: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 14:45:05,962: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 14:45:05,963: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 14:45:05,963: INFO: common: created directory at: artifacts]
+[2024-09-28 14:45:05,963: INFO: common: created directory at: artifacts/model_trainer]
+[2024-09-28 14:45:05,972: INFO: main: >>>>>> stage Model Trainer stage completed <<<<<<
+
+x=========x]
+[2024-09-28 14:45:05,972: INFO: main: >>>>>> stage Model evaluation stage started <<<<<<]
+[2024-09-28 14:45:05,973: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 14:45:05,973: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 14:45:05,974: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 14:45:05,974: INFO: common: created directory at: artifacts]
+[2024-09-28 14:45:05,974: INFO: common: created directory at: artifacts/model_evaluation]
+[2024-09-28 14:45:06,358: ERROR: main: INVALID_PARAMETER_VALUE: Response: {'error_code': 'INVALID_PARAMETER_VALUE'}]
+Traceback (most recent call last):
+  File "/Users/sudipkhadka/Desktop/Semantic-search/main.py", line 53, in <module>
+    data_ingestion.main()
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/pipeline/stage_05_model_evaluation.py", line 15, in main
+    model_evaluation_config.log_into_mlflow()
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/components/model_evaluation.py", line 41, in log_into_mlflow
+    with mlflow.start_run():
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/tracking/fluent.py", line 350, in start_run
+    active_run_obj = client.create_run(
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/tracking/client.py", line 275, in create_run
+    return self._tracking_client.create_run(experiment_id, start_time, tags, run_name)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/tracking/_tracking_service/client.py", line 131, in create_run
+    return self.store.create_run(
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/store/tracking/rest_store.py", line 175, in create_run
+    response_proto = self._call_endpoint(CreateRun, req_body)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/store/tracking/rest_store.py", line 56, in _call_endpoint
+    return call_endpoint(self.get_host_creds(), endpoint, method, json_body, response_proto)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/utils/rest_utils.py", line 281, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/utils/rest_utils.py", line 207, in verify_rest_response
+    raise RestException(json.loads(response.text))
+mlflow.exceptions.RestException: INVALID_PARAMETER_VALUE: Response: {'error_code': 'INVALID_PARAMETER_VALUE'}
+[2024-09-28 14:45:41,538: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-09-28 14:45:41,540: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 14:45:41,540: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 14:45:41,541: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 14:45:41,542: INFO: common: created directory at: artifacts]
+[2024-09-28 14:45:41,542: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-09-28 14:45:42,148: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 2DDA:2361F2:12E8080:147B0A9:66F856E2
+Accept-Ranges: bytes
+Date: Sat, 28 Sep 2024 19:45:42 GMT
+Via: 1.1 varnish
+X-Served-By: cache-dfw-kdfw8210112-DFW
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1727552742.019716,VS0,VE119
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 9b90ed7d4f8725e9e21d704e55ca8c4710a51803
+Expires: Sat, 28 Sep 2024 19:50:42 GMT
+Source-Age: 0
+
+]
+[2024-09-28 14:45:42,152: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-09-28 14:45:42,152: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2024-09-28 14:45:42,156: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 14:45:42,157: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 14:45:42,159: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 14:45:42,160: INFO: common: created directory at: artifacts]
+[2024-09-28 14:45:42,160: INFO: common: created directory at: artifacts/data_validation]
+[2024-09-28 14:45:42,167: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2024-09-28 14:45:42,167: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2024-09-28 14:45:42,170: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 14:45:42,171: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 14:45:42,173: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 14:45:42,173: INFO: common: created directory at: artifacts]
+[2024-09-28 14:45:42,173: INFO: common: created directory at: artifacts/data_transformation]
+[2024-09-28 14:45:42,189: INFO: data_transformation: solited data into training and test sets]
+[2024-09-28 14:45:42,190: INFO: data_transformation: (1199, 12)]
+[2024-09-28 14:45:42,190: INFO: data_transformation: (400, 12)]
+[2024-09-28 14:45:42,190: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2024-09-28 14:45:42,190: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2024-09-28 14:45:42,192: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 14:45:42,193: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 14:45:42,194: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 14:45:42,194: INFO: common: created directory at: artifacts]
+[2024-09-28 14:45:42,194: INFO: common: created directory at: artifacts/model_trainer]
+[2024-09-28 14:45:42,200: INFO: main: >>>>>> stage Model Trainer stage completed <<<<<<
+
+x=========x]
+[2024-09-28 14:45:42,200: INFO: main: >>>>>> stage Model evaluation stage started <<<<<<]
+[2024-09-28 14:45:42,202: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-09-28 14:45:42,203: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-28 14:45:42,204: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-09-28 14:45:42,204: INFO: common: created directory at: artifacts]
+[2024-09-28 14:45:42,204: INFO: common: created directory at: artifacts/model_evaluation]
+[2024-09-28 14:45:42,526: ERROR: main: INVALID_PARAMETER_VALUE: Response: {'error_code': 'INVALID_PARAMETER_VALUE'}]
+Traceback (most recent call last):
+  File "/Users/sudipkhadka/Desktop/Semantic-search/main.py", line 53, in <module>
+    data_ingestion.main()
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/pipeline/stage_05_model_evaluation.py", line 15, in main
+    model_evaluation_config.log_into_mlflow()
+  File "/Users/sudipkhadka/Desktop/Semantic-search/src/mlProject/components/model_evaluation.py", line 41, in log_into_mlflow
+    with mlflow.start_run():
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/tracking/fluent.py", line 350, in start_run
+    active_run_obj = client.create_run(
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/tracking/client.py", line 275, in create_run
+    return self._tracking_client.create_run(experiment_id, start_time, tags, run_name)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/tracking/_tracking_service/client.py", line 131, in create_run
+    return self.store.create_run(
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/store/tracking/rest_store.py", line 175, in create_run
+    response_proto = self._call_endpoint(CreateRun, req_body)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/store/tracking/rest_store.py", line 56, in _call_endpoint
+    return call_endpoint(self.get_host_creds(), endpoint, method, json_body, response_proto)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/utils/rest_utils.py", line 281, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+  File "/Users/sudipkhadka/Desktop/Semantic-search/.mlop/lib/python3.10/site-packages/mlflow/utils/rest_utils.py", line 207, in verify_rest_response
+    raise RestException(json.loads(response.text))
+mlflow.exceptions.RestException: INVALID_PARAMETER_VALUE: Response: {'error_code': 'INVALID_PARAMETER_VALUE'}
+[2024-09-28 15:12:03,414: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.188:8080]
+[2024-09-28 15:12:03,415: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-09-28 15:13:02,529: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.188:8080]
+[2024-09-28 15:13:02,529: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-09-28 15:14:03,551: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8081
+ * Running on http://192.168.1.188:8081]
+[2024-09-28 15:14:03,551: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-09-28 15:14:21,852: INFO: _internal: 192.168.1.188 - - [28/Sep/2024 15:14:21] "GET / HTTP/1.1" 200 -]
+[2024-09-28 15:14:21,869: INFO: _internal: 192.168.1.188 - - [28/Sep/2024 15:14:21] "[33mGET /static/css/styles.css HTTP/1.1[0m" 404 -]
+[2024-09-28 15:14:21,872: INFO: _internal: 192.168.1.188 - - [28/Sep/2024 15:14:21] "[33mGET /static/css2/style.css HTTP/1.1[0m" 404 -]
+[2024-09-28 15:14:21,873: INFO: _internal: 192.168.1.188 - - [28/Sep/2024 15:14:21] "[33mGET /static/js/scripts.js HTTP/1.1[0m" 404 -]
+[2024-09-28 15:14:21,874: INFO: _internal: 192.168.1.188 - - [28/Sep/2024 15:14:21] "[33mGET /static/css2/nunito-font.css HTTP/1.1[0m" 404 -]
+[2024-09-28 15:14:22,476: INFO: _internal: 192.168.1.188 - - [28/Sep/2024 15:14:22] "[33mGET /static/assets/img/wine.jpg HTTP/1.1[0m" 404 -]
+[2024-09-28 15:14:22,478: INFO: _internal: 192.168.1.188 - - [28/Sep/2024 15:14:22] "[33mGET /static/assets/img/form-v9.jpg HTTP/1.1[0m" 404 -]
+[2024-09-28 15:14:22,716: INFO: _internal: 192.168.1.188 - - [28/Sep/2024 15:14:22] "[33mGET /static/assets/favicon.ico HTTP/1.1[0m" 404 -]
+[2024-09-28 15:15:25,366: INFO: _internal: 192.168.1.188 - - [28/Sep/2024 15:15:25] "GET / HTTP/1.1" 200 -]
+[2024-09-28 15:15:25,378: INFO: _internal: 192.168.1.188 - - [28/Sep/2024 15:15:25] "[33mGET /static/css/styles.css HTTP/1.1[0m" 404 -]
+[2024-09-28 15:15:25,379: INFO: _internal: 192.168.1.188 - - [28/Sep/2024 15:15:25] "[33mGET /static/css2/style.css HTTP/1.1[0m" 404 -]
+[2024-09-28 15:15:25,379: INFO: _internal: 192.168.1.188 - - [28/Sep/2024 15:15:25] "[33mGET /static/js/scripts.js HTTP/1.1[0m" 404 -]
+[2024-09-28 15:15:25,379: INFO: _internal: 192.168.1.188 - - [28/Sep/2024 15:15:25] "[33mGET /static/css2/nunito-font.css HTTP/1.1[0m" 404 -]
+[2024-09-28 15:15:25,602: INFO: _internal: 192.168.1.188 - - [28/Sep/2024 15:15:25] "[33mGET /static/assets/img/form-v9.jpg HTTP/1.1[0m" 404 -]
+[2024-09-28 15:15:25,602: INFO: _internal: 192.168.1.188 - - [28/Sep/2024 15:15:25] "[33mGET /static/assets/img/wine.jpg HTTP/1.1[0m" 404 -]
+[2024-09-28 15:15:25,686: INFO: _internal: 192.168.1.188 - - [28/Sep/2024 15:15:25] "[33mGET /static/assets/favicon.ico HTTP/1.1[0m" 404 -]
+[2024-09-28 15:15:30,868: INFO: _internal: 192.168.1.188 - - [28/Sep/2024 15:15:30] "GET / HTTP/1.1" 200 -]
+[2024-09-28 15:15:30,882: INFO: _internal: 192.168.1.188 - - [28/Sep/2024 15:15:30] "[33mGET /static/css/styles.css HTTP/1.1[0m" 404 -]
+[2024-09-28 15:15:30,884: INFO: _internal: 192.168.1.188 - - [28/Sep/2024 15:15:30] "[33mGET /static/css2/style.css HTTP/1.1[0m" 404 -]
+[2024-09-28 15:15:30,884: INFO: _internal: 192.168.1.188 - - [28/Sep/2024 15:15:30] "[33mGET /static/css2/nunito-font.css HTTP/1.1[0m" 404 -]
+[2024-09-28 15:15:30,886: INFO: _internal: 192.168.1.188 - - [28/Sep/2024 15:15:30] "[33mGET /static/js/scripts.js HTTP/1.1[0m" 404 -]
+[2024-09-28 15:15:30,892: INFO: _internal: 192.168.1.188 - - [28/Sep/2024 15:15:30] "[33mGET /static/assets/img/form-v9.jpg HTTP/1.1[0m" 404 -]
+[2024-09-28 15:15:30,893: INFO: _internal: 192.168.1.188 - - [28/Sep/2024 15:15:30] "[33mGET /static/assets/img/wine.jpg HTTP/1.1[0m" 404 -]
