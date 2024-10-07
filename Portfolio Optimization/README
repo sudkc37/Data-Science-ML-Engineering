@@ -1,1 +1,6 @@
-
+Constructed the Minimum Variance Portfolio and optimized Tendency and Desired Portfolios using
+a variance-covariance matrix. To assess risk, I applied Value at Risk (VaR) to quantify the 
+maximum potential loss each portfolio could face over a specified period with a given confidence
+level. Additionally, I utilized Geometric Brownian Motion (GBM) to simulate the price movements of
+the portfolios and their individual assets over a three-month horizon, based on historical 
+volatility and drift.
