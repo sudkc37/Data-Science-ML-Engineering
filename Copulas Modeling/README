@@ -1,1 +1,5 @@
-
+Gaussian, Vine and Clayton Copulas were evaluated for their effectiveness in modeling dependency 
+and Value at Risk (VaR) in Time Series. Clayton Copula excelled in extreme risk assessment due to 
+its lower tail dependency capture. Vine Copula was less effective, possibly due to complexity. 
+Covariance method lacked accuracy in extreme market conditions, highlighting the importance of 
+copulas in risk management.
