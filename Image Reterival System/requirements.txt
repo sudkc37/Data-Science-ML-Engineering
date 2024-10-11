@@ -1,9 +1,0 @@
-numpy
-opencv-python
-pandas
-scikit-image
-scikit-learn
-hspy
-scipy
-tensorflow
-matplotlib
