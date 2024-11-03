@@ -38,8 +38,12 @@ setting > actions > runner > new self hosted runner > choose os > run following 
 
 ## Setup github secretes
 AWS_ACCESS_KEY_ID=
+
 AWS_SECRET_ACCESS_KEY=
+
 AWS_REGION= 
+
 AWS_ECR_LOGIN_URI= demo>> 566373416292.dkr.ecr.ap-south-1.amazonaws.com
+
 ECR_REPOSITORY_NAME=
 
