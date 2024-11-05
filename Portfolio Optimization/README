@@ -9,3 +9,5 @@ Additionally, I utilized Geometric Brownian Motion (GBM) to simulate the price m
 the portfolios and their individual assets over a three-month horizon, based on historical 
 volatility and drift.
 
+## Minimum Variance Portfolio
+
