@@ -1,4 +1,4 @@
-                     Portfolio Optimization
+                                  Portfolio Optimization
 
 Constructed the Minimum Variance Portfolio and optimized Tendency and Desired Portfolios using
 a variance-covariance matrix. To assess risk, I applied Value at Risk (VaR) to quantify the 
