@@ -25,6 +25,9 @@ volatility and drift.
 ## Efficient Frontier for MVP Vs Tendency Vs Desired Portfolio:
 <img width="793" alt="Screenshot 2024-11-05 at 11 07 55 AM" src="https://github.com/user-attachments/assets/f3f55755-32f0-4681-92ce-d7cc20f0181f">
 
+<img width="936" alt="Screenshot 2024-11-05 at 11 13 55 AM" src="https://github.com/user-attachments/assets/5e3b5a94-a85f-4744-a6f6-f7d1f4a7b8e4">
+
+
 ## Simulated Value of Minimum Variance Portfolio:
 <img width="770" alt="Screenshot 2024-11-05 at 11 09 03 AM" src="https://github.com/user-attachments/assets/6c5ab1fa-a78a-4c39-b783-40ee39969a2c">
 
